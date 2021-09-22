@@ -12,7 +12,7 @@
 }
 
 #board{
-    background: linear-gradient(green,yellow);
+    background: linear-gradient(rgb(18, 56, 223),rgb(223, 223, 157));
     width:90vmin;
     height:92vmin;
     border:2px solid black;
@@ -24,7 +24,12 @@
 .head{
     background-color: red;
 }
+
+.snake{
+    background-color:purple ;
+}
+
 .food{
-    background-color: purple;
+    background-color: yellow;
     
 }

@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+#score{
+    position:absolute;
+    top:9px;
+    right:200px;
+    font-size:39px;
+    font-weight: bold;
+}
+
 #board{
     background: linear-gradient(rgb(18, 56, 223),rgb(223, 223, 157));
     width:90vmin;
@@ -22,14 +30,21 @@
 }
 
 .head{
-    background-color: red;
+    background: linear-gradient(red, yellow);
+    border:2px solid purple;
+    transform:scale(1.02);
+    border-radius: 9px;;
 }
 
 .snake{
     background-color:purple ;
+    border:.25vmin solid white;
+    border-radius: 12px;
 }
 
 .food{
-    background-color: yellow;
+    background-color: linear-gradient(red,purple);
+    border:.25vmin solid black;
+    border-radius: 8px;
     
 }

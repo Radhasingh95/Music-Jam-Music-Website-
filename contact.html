@@ -219,7 +219,7 @@ input[type=checkbox]:checked + label {
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" name = "submit"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
         </div>
       </div>
@@ -274,30 +274,32 @@ input[type=checkbox]:checked + label {
         <div class="row input-container">
                 <div class="col-xs-12">
                     <div class="styled-input wide">
-                        <input type="text" required />
+                        <input type="text" name = "name" required />
                         <label>Name</label> 
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="styled-input">
-                        <input type="text" required />
+                        <input type="text" name = "email"   required />
+                        
                         <label>Email</label> 
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="styled-input" style="float:right;">
-                        <input type="text" required />
+                        <input type="number" name = "phone" required />
                         <label>Phone Number</label> 
                     </div>
                 </div>
                 <div class="col-xs-12">
                     <div class="styled-input wide">
-                        <textarea required></textarea>
+                        <textarea name = "msg" required></textarea>
                         <label>Message</label>
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <div class="btn-lrg submit-btn">Send Message</div>
+                    <!-- <div class="btn-lrg submit-btn">Send Message</div> -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </div>
         </div>
       </form>

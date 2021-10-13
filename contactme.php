@@ -1,14 +1,14 @@
 <?php
 
 
-
+$name = filter_input(INPUT_POST,'name');
 $email = filter_input(INPUT_POST,'email');
-$password = filter_input(INPUT_POST,'password');
-
+$phone = filter_input(INPUT_POST,'phone');
+$msg = filter_input(INPUT_POST,'msg');
 
 if(!empty($email))
 {
-    if(!empty($password))
+    if(!empty($msg))
     {
     $host = "localhost";
     $dbusername = "root";
@@ -22,8 +22,8 @@ if(!empty($email))
         .mysqli_connect_error());
      }
      else{
-         $sql = "INSERT INTO signup (email, password)
-         values('$email','$password')";
+         $sql = "INSERT INTO contact (name,email, phone,msg)
+         values('$name', '$email','$phone', '$msg')";
          if($conn->query($sql)){
              echo "New record is inserted successfully";
          }
@@ -35,7 +35,7 @@ if(!empty($email))
 
     }
     else{
-        echo"Password should not be empty";
+        echo"Message should not be empty";
         die();
     }
 }

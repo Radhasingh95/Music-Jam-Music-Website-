@@ -8,18 +8,18 @@ $db = "signup";
 $conn = mysqli_connect($server,$user,$password,$db);
 if($conn)
 {
-    ?>
-    <script>
-    alert("Connection Successful");
-</script>
-    <?php
+    
+   echo " <script language='javascript'>";
+   echo " alert('Connection Successful')";
+    echo"</script>";
+    
 }
 else{
-    ?>
-    <script>
-    alert("No Connection");
-    </script>
-    <?php
+    
+    echo " <script language='javascript'>";
+   echo " alert('No Connection ')";
+    echo"</script>";
+    
 
 }
 
@@ -45,11 +45,11 @@ else{
 //             echo"Login Successful";
 //             // header('location:music.html');
 
-            ?>
+            
 //             <script>
 //                 location.replace("music.html");
 //             </script>
-//             <?php
+//             
 //         }
 //         else{
 //             echo "Password Incorrect";

@@ -54,19 +54,80 @@
               </li>
              
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search Song" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div class="mx-2">
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
-    
-            </div>
+            
           </div>
         </div>
       </nav>
-      <!-- Login Modal -->
+     
+  
+
+  
+  
+      <h1 style="font-family: 'Niconne', cursive; text-align: center; font-size: 116px;">Get Started...</h1>
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">Ready to play amazing songs?</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+            <div class="feature col">
+                <!-- <div class="feature-icon bg-danger bg-gradient">
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                </div> -->
+                <h2>Already have an account</h2>
+                <!-- <p>Play and listen to musics...</p> -->
+                <!-- <a href="/Music-Jam-Music-Website-/music.html" class="icon-link">
+                    click here
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right"></use>
+                    </svg>
+                </a> -->
+                <div class="mx-2">
+                  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                  
+        
+                </div>
+            </div>
+            <div class="feature col">
+                <!-- <div class="feature-icon bg-danger bg-gradient">
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#people-circle"></use>
+                    </svg>
+                </div> -->
+                <h2>Don't have an account yet?</h2>
+                <!-- <p>Want some instruments...</p> -->
+                <!-- <a href="/Music-Jam-Music-Website-/instruments.html" class="icon-link">
+                    click here
+                    <svg class="bi" width="1em" height="1em">
+                        <use xlink:href="#chevron-right"></use>
+                    </svg>
+                </a> -->
+                <div class="mx-2">
+                  
+                  <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+        
+                </div>
+            </div>
+            <div class="feature col">
+                <!-- <div class="feature-icon bg-primary bg-gradient"> -->
+                <!-- <img class="bi" width="1em" height="17em" src="Assets/getstarted.jpg"></img> -->
+                <div class="img">
+
+                    <!-- <img src="Assets/getstarted.jpg" alt=""> -->
+                </div>
+                <!-- </div> -->
+                <!-- <h2>Featured title</h2>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="icon-link">
+              Call to action
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+            </a> -->
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -75,18 +136,18 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action = "login.php" method = "POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" name = "password" class="form-control" id="exampleInputPassword1">
             </div>
             
-            <button type="submit" name = "submit"  class="btn btn-primary">Login</button>
+            <button type="submit"  name = "submit" class="btn btn-primary">Login</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -110,12 +171,12 @@
           <form action = "connect.php" method = "POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" name = "email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" name = "password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" name="password" id="exampleInputPassword1">
             </div>
 
             
@@ -131,59 +192,7 @@
   </div>
 
   </div>
-  
-      <h1 style="font-family: 'Niconne', cursive; text-align: center; font-size: 116px;">Get Started...</h1>
-    <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">What stuff do you want?</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-            <div class="feature col">
-                <!-- <div class="feature-icon bg-danger bg-gradient">
-                    <svg class="bi" width="1em" height="1em">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                </div> -->
-                <h2>Music streaming</h2>
-                <p>Play and listen to musics...</p>
-                <a href="/Music-Jam-Music-Website-/music.html" class="icon-link">
-                    click here
-                    <svg class="bi" width="1em" height="1em">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <!-- <div class="feature-icon bg-danger bg-gradient">
-                    <svg class="bi" width="1em" height="1em">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                </div> -->
-                <h2>Instruments</h2>
-                <p>Want some instruments...</p>
-                <a href="/Music-Jam-Music-Website-/instruments.html" class="icon-link">
-                    click here
-                    <svg class="bi" width="1em" height="1em">
-                        <use xlink:href="#chevron-right"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="feature col">
-                <!-- <div class="feature-icon bg-primary bg-gradient"> -->
-                <!-- <img class="bi" width="1em" height="17em" src="Assets/getstarted.jpg"></img> -->
-                <div class="img">
-
-                    <!-- <img src="Assets/getstarted.jpg" alt=""> -->
-                </div>
-                <!-- </div> -->
-                <!-- <h2>Featured title</h2>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="icon-link">
-              Call to action
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-            </a> -->
-            </div>
-        </div>
-    </div>
+ 
 
     <!-- Optional JavaScript; choose one of the two! -->
 

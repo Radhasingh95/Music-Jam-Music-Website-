@@ -61,6 +61,14 @@
     margin-top: -1px;
     border-top-width: 1px;
 }
+.songName{
+display:flex;
+justify-content: space-between;
+}
+
+.songlistplay i{
+  cursor:pointer;
+}
 
   </style>
 </head>
@@ -94,83 +102,14 @@
           <input class="form-control me-2" type="search" placeholder="Search song" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <div class="mx-2">
-          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
-
-        </div>
+        
       </div>
     </div>
   </nav>
 
 
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login to Music Jam</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            
-            <button type="submit" name = "submit"  class="btn btn-primary">Login</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Sign Up Modal -->
-  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Get a Music Jam Account</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action = "connect.php" method = "POST">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" name = "email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password" id="exampleInputPassword1">
-            </div>
-
-            
-
-            <button type="submit" class="btn btn-primary">Create account</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  </div>
- 
+  
 
 
    <!-- Music list starts here -->
@@ -227,35 +166,39 @@
    <div class="d-flex  justify-content-center ">
      <div class="col-lg-2 mx-4  w-25">
        <div class="list-group  list-group-flush">
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent         ">
-           Bom Diggy
+        <!-- <span class="songName">Bom Diggy</span> -->
+        <!-- <span class="songlistplay"><span class="timestamp">05:34 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span> -->
+        
+   
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent         ">
+           Bom Diggy <span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span>
          </a>
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent">Moto</a>
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent">Daru Badnaam</a>
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent">High Rated Gabru</a>
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent">Lahore</a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Moto<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Daru Badnaam<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">High Rated Gabru<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Lahore<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
        </div>
      </div>
      <div class="col-lg-2 mx-4 w-25">
        <div class="list-group list-group-flush">
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent ">
-           Girl Like Me
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent ">
+           Girl Like Me<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span>
          </a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Ishaare Tere</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Nachle Na</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Naja</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent ">Hulara</a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Ishaare Tere<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Nachle Na<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Naja<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent ">Hulara<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
        </div>
      </div>
      <div class="col-lg-2 mx-4 w-25">
        <div class="list-group list-group-flush">
-         <a href="#" class="list-group-item list-group-item-action active bg-transparent">
-           Photo
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">
+           Photo<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span>
          </a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Suit Suit Karda</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Jaani Tera Na</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent">Tera Ghata</a>
-         <a href="#" class="list-group-item list-group-item-action  active bg-transparent ">Nashe Si Chadh Gayi</a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Suit Suit Karda<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Jaani Tera Na<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent">Tera Ghata<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
+         <a href="#" class="list-group-item list-group-item-action songName active bg-transparent ">Nashe Si Chadh Gayi<span class="songlistplay"><i id="0" class="far songItemPlay fa-play-circle"></i></span></a>
        </div>
      </div>
    </div>
@@ -418,7 +361,7 @@
         <i class="fas fa-3x fa-step-forward" id="next"></i> 
     </div>
     <div class="songInfo">
-        <img src="Assets/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        <img src="Assets/playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Bom Diggy</span>
     </div>
 </div>
 

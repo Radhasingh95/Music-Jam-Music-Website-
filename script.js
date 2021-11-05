@@ -31,7 +31,8 @@ let songs = [
 //     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
 //     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 // })
- 
+
+
 
 // Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
@@ -68,7 +69,8 @@ const makeAllPlays = ()=>{
 }
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-    element.addEventListener('click', (e)=>{ 
+    element.addEventListener('click', (e)=>{
+        console.log("clicked icon") ;
         makeAllPlays();
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');

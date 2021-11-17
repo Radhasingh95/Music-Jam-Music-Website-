@@ -45,6 +45,11 @@ if(isset($_POST['submit']))
         echo "$db_pass";
         echo "$password";
         
+        if($email == "admin@gmail.com"){
+            header('location:http://localhost/Music-Jam-Music-Website-/audio.php');
+            
+        }
+        else{
         if($db_pass == $password){
             echo"Login Successful";
             header('location:http://localhost/Music-Jam-Music-Website-/music.html');
@@ -55,7 +60,7 @@ if(isset($_POST['submit']))
         }
         else{
             echo "Password Incorrect";
-        }
+        }}
 
 
     }

@@ -23,6 +23,11 @@
       padding:3vh 34vw;
       
     }
+    .play{
+      background-color: orange;
+      height:15vh;
+      padding:3vh 34vw;
+    }
   </style>
 <body>
 
@@ -84,12 +89,16 @@
 </div>
 
 <section class="addfile">
+  <h5>Add songs to the database</h5>
   <form action="upload.php" method = "POST" enctype = "multipart/form-data">
    <input type="file" name = "audioFile">
    <input type="submit" value = "Upload Audio" name = "save_audio"> 
    </form> 
 </section>
-
+<section class = "play">
+    <h4>Do you wanna play music?</h4>
+    <a href="/Music-Jam-Music-Website-/music.html"> <button value="submit">Yes</button> </a>
+</section>
   
      
 
